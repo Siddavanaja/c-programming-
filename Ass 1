@@ -1,0 +1,20 @@
+//prime range
+#include<stdio.h>
+void main()
+{
+	int i,j,range,n=0,count=0;
+	scanf("%d",&range);
+	for(i=1;i<=range;i++)
+	{
+		for(j=1;j<=i;j++)
+		if(i%j==0)
+		n++;
+		if(n==2)
+		{
+		printf("%d\n",i);
+		count++;
+		}
+		n=0;
+	}
+	printf("count %d",count);							
+}
